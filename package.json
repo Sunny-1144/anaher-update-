@@ -1,0 +1,22 @@
+{
+  "name": "anaher-cross-platform",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "apps/desktop"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm --workspace @anaher/api run dev",
+    "dev:web": "npm --workspace @anaher/web run dev",
+    "dev:desktop": "npm --workspace @anaher/desktop run dev",
+    "build": "npm run build --workspace @anaher/api && npm run build --workspace @anaher/web",
+    "test": "npm run test --workspace @anaher/api && npm run test --workspace @anaher/web",
+    "db:migrate": "npm run db:migrate --workspace @anaher/api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.3"
+  }
+}

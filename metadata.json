@@ -1,0 +1,7 @@
+{
+  "name": "ANAHER",
+  "description": "ANAHER GENIUS AI - Describe it. ANAHER builds it. Autonomous multi-agent engine powered by MATRIX.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+development phase right 
